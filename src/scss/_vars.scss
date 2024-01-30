@@ -1,0 +1,23 @@
+$font-family: "Open Sans", sans-serif;
+$font-family-sub: "Cormorant", sans-serif;
+
+$content-width: 1110px;
+$container-offset: 32px;
+$container-width: calc(($content-width) + ($container-offset) * 2);
+$section-offset: 60px;
+
+$white: #fff;
+$background: #1d2f30;
+$background-shade: #0b1919;
+$green-text: #506829;
+$green-active: #688b05;
+$green-hover: #91ac46;
+$green-focus: #83a440;
+$grey: #899d9d;
+$primary-green: #bae249;
+$red: #e24949;
+
+$duration-short: 0.3s;
+$duration-medium: 0.4s;
+$duration-extra-long: 0.5s;
+$transition: 1.25s cubic-bezier(0.2, 0.6, 0, 1);

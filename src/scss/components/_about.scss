@@ -1,0 +1,131 @@
+.about {
+  padding-bottom: $section-offset;
+  background-color: $background;
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__wrapper {
+    @include flex-all-sb;
+
+    gap: 30px;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    @include flex-all-center;
+
+    position: relative;
+    align-self: stretch;
+    padding: 16px;
+    width: 100%;
+    background-color: $background-shade;
+
+    img {
+      width: 100%;
+    }
+
+    @include small-tablet {
+      align-items: flex-start;
+      justify-content: start;
+      overflow-x: scroll;
+      padding: 0;
+      height: 493px;
+      scroll-snap-type: x mandatory;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      img {
+        display: block;
+        padding: 16px;
+        min-width: 800px;
+        object-fit: contain;
+        scroll-snap-align: start;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 16px 16px 24px;
+    max-width: 255px;
+    background-color: $primary-green;
+
+    @include small-tablet {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  &__hint {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    display: none;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $grey;
+
+    svg {
+      display: inline-block;
+      margin-left: 8px;
+      width: 80px;
+      height: 20px;
+      fill: $grey;
+    }
+
+    @include small-tablet {
+      display: flex;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 8px;
+    font-family: $font-family-sub;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: $background;
+  }
+
+  &__content {
+    margin: 0;
+    margin-bottom: 25px;
+
+    @include small-tablet {
+      margin-bottom: 76px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $green-text;
+
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__link {
+    margin-top: auto;
+  }
+}

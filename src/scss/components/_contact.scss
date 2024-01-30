@@ -1,0 +1,100 @@
+.contact {
+  @include bg-cover;
+
+  padding-top: $section-offset;
+  padding-bottom: $section-offset;
+  background-image: url("../../img/contact-bg.jpg");
+
+  &__header {
+    margin-bottom: 27px;
+    max-width: 825px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $white;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__form {
+    max-width: 350px;
+  }
+}
+
+.form-label {
+  position: relative;
+  display: block;
+  margin-bottom: 24px;
+  width: 100%;
+
+  .just-validate-error-label {
+    position: absolute;
+    left: 18px;
+    top: -18px;
+    font-weight: 400;
+    font-size: 12px;
+    color: $red;
+  }
+}
+
+.form-input {
+  outline: none;
+  border: 1px solid $white;
+  padding: 10px 16px;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $background-shade;
+  background-color: $white;
+  transition: background-color $duration-short;
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $grey;
+    transition: color $duration-short;
+  }
+
+  @include hover {
+    background-color: $grey;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  &:focus-visible {
+    outline: 1px solid $green-focus;
+    outline-offset: 2px;
+  }
+
+  &:active,
+  &:active:focus-visible {
+    background-color: $grey;
+
+    &::placeholder {
+      color: $background-shade;
+    }
+  }
+}
+
+.form-input.just-validate-error-field {
+  border-color: $red;
+
+  &:focus-visible {
+    outline-color: $red;
+  }
+}

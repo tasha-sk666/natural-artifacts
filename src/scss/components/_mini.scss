@@ -1,0 +1,228 @@
+.logo {
+  display: block;
+
+  svg {
+    display: block;
+    width: 65px;
+    height: 20px;
+    fill: $white;
+    object-fit: cover;
+  }
+}
+
+.search {
+  &__btn {
+    width: 24px;
+    height: 24px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: transparent;
+      stroke: $primary-green;
+      object-fit: cover;
+      transition: stroke $duration-short;
+    }
+
+    @include hover {
+      svg {
+        stroke: $green-hover;
+      }
+    }
+
+    &:focus-visible {
+      outline: 1px solid $green-focus;
+      outline-offset: 2px;
+    }
+
+    &:active,
+    &:active:focus-visible {
+      color: $green-active;
+    }
+  }
+}
+
+.log-in {
+  width: 24px;
+  height: 24px;
+  transition: border-color $duration-short;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: $primary-green;
+    object-fit: cover;
+    transition: stroke $duration-short;
+  }
+
+  @include hover {
+    svg {
+      stroke: $green-hover;
+    }
+  }
+
+  &:focus-visible {
+    outline: 1px solid $green-focus;
+    outline-offset: 2px;
+  }
+
+  &:active,
+  &:active:focus-visible {
+    color: $green-active;
+  }
+}
+
+.btn {
+  display: flex;
+  border: 1px solid $primary-green;
+  padding: 10px 28px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $primary-green;
+  transition: all $duration-short;
+
+  @include hover {
+    border-color: $primary-green;
+    color: $background-shade;
+    background-color: $primary-green;
+  }
+
+  &:focus-visible {
+    outline: 1px solid $green-focus;
+    outline-offset: 2px;
+  }
+
+  &:active,
+  &:active:focus-visible {
+    border-color: $green-active;
+    color: $background-shade;
+    background-color: $green-active;
+  }
+
+  &:disabled {
+    border-color: $grey;
+    color: $grey;
+    background-color: transparent;
+  }
+
+  &--primary {
+    border: 1px solid $primary-green;
+    color: $background-shade;
+    background-color: $primary-green;
+
+    @include hover {
+      border-color: $green-hover;
+      background-color: $green-hover;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $green-focus;
+      outline-offset: 2px;
+      border: 1px solid $primary-green;
+      color: $background-shade;
+      background-color: $primary-green;
+    }
+
+    &:active,
+    &:active:focus-visible {
+      background-color: $green-active;
+      border-color: $green-active;
+    }
+
+    &:disabled {
+      border-color: $grey;
+      color: $background;
+      background-color: $grey;
+    }
+  }
+}
+
+.link {
+  @include flex-v-center;
+
+  width: max-content;
+  font-weight: 700;
+  font-size: 16px;
+  color: $primary-green;
+  transition: color $duration-short;
+
+  svg {
+    margin-left: 8px;
+    width: 42px;
+    height: 23px;
+    fill: $primary-green;
+    object-fit: cover;
+    transition: fill $duration-short;
+  }
+
+  @include hover {
+    color: $green-hover;
+
+    svg {
+      fill: $green-hover;
+    }
+  }
+
+  &:focus-visible {
+    outline: 1px solid $green-active;
+    outline-offset: 2px;
+  }
+
+  &:active,
+  &:active:focus-visible {
+    color: $green-active;
+
+    svg {
+      fill: $green-active;
+    }
+  }
+
+  &--primary {
+    color: $background-shade;
+
+    svg {
+      fill: $background-shade;
+    }
+
+    @include hover {
+      color: $green-active;
+
+      svg {
+        fill: $green-active;
+      }
+    }
+
+    &:focus-visible {
+      outline: 1px solid $green-focus;
+    }
+
+    &:active,
+    &:active:focus-visible {
+      color: $background-shade;
+
+      svg {
+        fill: $background-shade;
+      }
+    }
+  }
+}
+
+.title {
+  margin: 0;
+  font-family: $font-family-sub;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 48px;
+  line-height: 100%;
+  color: $white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}

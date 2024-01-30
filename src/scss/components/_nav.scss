@@ -1,0 +1,37 @@
+.nav {
+  &__list {
+    @include flex-v-center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 64px;
+
+      @include tablet {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $white;
+    transition: color $duration-short;
+
+    @include hover {
+      color: $primary-green;
+    }
+
+    &:focus-visible {
+      outline: 1px solid $green-active;
+      outline-offset: 2px;
+    }
+
+    &:active,
+    &:active:focus-visible {
+      color: $green-active;
+    }
+  }
+}

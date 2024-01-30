@@ -1,0 +1,70 @@
+.footer {
+  &__top {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    background-color: $background-shade;
+  }
+
+  &__container {
+    @include flex-all-center;
+  }
+
+  &__bottom {
+    @include flex-all-center;
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: $background;
+  }
+}
+
+.social {
+  @include flex-all-center;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    @include flex-all-center;
+
+    width: 24px;
+    height: 24px;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: $grey;
+      object-fit: cover;
+      transition: fill $duration-short;
+    }
+
+    @include hover {
+      svg {
+        fill: $primary-green;
+      }
+    }
+
+    &:focus-visible {
+      outline: 1px solid $green-focus;
+      outline-offset: 2px;
+    }
+
+    &:active,
+    &:active:focus-visible {
+      svg {
+        fill: $green-active;
+      }
+    }
+  }
+}
+
+.copyright {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  color: $grey;
+}

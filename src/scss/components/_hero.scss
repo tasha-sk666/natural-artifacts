@@ -1,0 +1,50 @@
+.hero {
+  @include bg-cover;
+
+  padding-top: 113px;
+  padding-bottom: 117px;
+  background-image: url("../../img/hero-bg.jpg");
+
+  &__container {
+    @include flex-v-center;
+
+    align-self: stretch;
+  }
+
+  &__content {
+    max-width: 688px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 22px;
+    font-family: $font-family-sub;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100%;
+    color: $white;
+
+    @include small-tablet {
+      margin-bottom: 30px;
+      font-size: 48px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $white;
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  @include small-tablet {
+    padding-top: 69px;
+    padding-bottom: 30px;
+  }
+}

@@ -1,0 +1,59 @@
+.header {
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: $background;
+
+  &__container {
+    @include flex-v-center;
+  }
+
+  &__logo {
+    margin-right: 125px;
+
+    @include tablet {
+      margin-right: 50px;
+    }
+
+    @include small-tablet {
+      margin-right: auto;
+    }
+  }
+
+  &__nav {
+    margin-right: auto;
+
+    @include small-tablet {
+      @include flex-all-center;
+
+      position: absolute;
+      left: 0;
+      bottom: -40px;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    @include mobile {
+      justify-content: start;
+      overflow: auto;
+      padding-right: $container-offset;
+      padding-left: $container-offset;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+
+  &__search {
+    margin-right: 64px;
+
+    @include tablet {
+      margin-right: 32px;
+    }
+  }
+}
