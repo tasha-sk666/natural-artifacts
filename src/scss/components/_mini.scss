@@ -1,11 +1,10 @@
 .logo {
   display: block;
 
-  svg {
+  img {
     display: block;
     width: 65px;
     height: 20px;
-    fill: $white;
     object-fit: cover;
   }
 }
